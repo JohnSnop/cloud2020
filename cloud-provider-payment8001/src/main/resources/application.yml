@@ -1,0 +1,32 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    # spring服务的名称
+    # 也是eureka serser 的 application 名称
+    name: cloud-payment-service
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://localhost:3306/springcloud2020?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: root
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.wf.springcloud.entities
+
+eureka:
+  client:
+    # 表示是否将服务注册进 eureka server ,默认是true
+    register-with-eureka: true
+    # 是否从eureka抓取已有的注册信息，默认是true,   单节点无所谓，集群环境必须设置为true
+    # 才能配合ribbon使用负载均衡
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+
+
+
