@@ -11,4 +11,4 @@ spring-cloud Hoxton.SR1
     Eureka,Zookeeper,Consul
 
 2、服务的负载均衡 LoadBalance
-    Ribbon
+    Ribbon,OpenFeign
