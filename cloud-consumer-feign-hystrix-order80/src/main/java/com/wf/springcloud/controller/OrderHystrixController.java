@@ -1,5 +1,7 @@
 package com.wf.springcloud.controller;
 
+import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.wf.springcloud.service.PaymentHystrixService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +17,8 @@ import javax.annotation.Resource;
  **/
 @RestController
 @Slf4j
+// 也可以配置外部类，defaultFallback--类的全路径
+@DefaultProperties(defaultFallback = "payment_Global_FallbackMethod")
 public class OrderHystrixController {
 
     @Resource
@@ -26,8 +30,21 @@ public class OrderHystrixController {
     }
 
     @GetMapping("/consumer/payment/hystrix/timeout/{id}")
+    /*@HystrixCommand(fallbackMethod = "paymentInfo_TimeOutHandler", commandProperties = {
+            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1500")
+    })*/
+    @HystrixCommand
     public String paymentInfo_TimeOut(@PathVariable("id") Integer id) {
+        // int a = 10 / 0;
+        // 异常，直接进入fallback
         return paymentHystrixService.paymentInfo_TimeOut(id);
     }
 
+    public String paymentInfo_TimeOutHandler(@PathVariable("id") Integer id) {
+        return "80消费者调用接口超时或者异常，\t" ;
+    }
+
+    public String payment_Global_FallbackMethod() {
+        return "全局默认降级方法-payment_Global_FallbackMethod";
+    }
 }

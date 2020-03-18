@@ -12,3 +12,6 @@ spring-cloud Hoxton.SR1
 
 2、服务的负载均衡 LoadBalance
     Ribbon,OpenFeign
+    
+3、断路器 Hystrix
+    服务降级、熔断、限流等
