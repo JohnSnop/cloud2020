@@ -15,3 +15,4 @@ spring-cloud Hoxton.SR1
     
 3、断路器 Hystrix
     服务降级、熔断、限流等
+    Hystrix Dashboard
