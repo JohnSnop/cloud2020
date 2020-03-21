@@ -19,3 +19,6 @@ spring-cloud Hoxton.SR1
     
 4、服务网关
     springcloud-gateway
+    route(路由)
+    predicate(断言)
+    filter(过滤器)
