@@ -22,3 +22,6 @@ spring-cloud Hoxton.SR1
     route(路由)
     predicate(断言)
     filter(过滤器)
+    
+4、服务配置中心
+    Springcloud Config
