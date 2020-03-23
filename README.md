@@ -23,5 +23,9 @@ spring-cloud Hoxton.SR1
     predicate(断言)
     filter(过滤器)
     
-4、服务配置中心
-    Springcloud Config
+5、服务配置中心+消息总线
+    Springcloud Config & Springcloud Bus
+    
+6、消息驱动
+    Springcloud Stream
+        Source.class    Sink.class
