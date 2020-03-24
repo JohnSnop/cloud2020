@@ -29,3 +29,6 @@ spring-cloud Hoxton.SR1
 6、消息驱动
     Springcloud Stream
         Source.class    Sink.class
+        
+7、分布式链路跟踪
+    Springcloud Sleuth + Zipkin
