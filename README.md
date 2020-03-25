@@ -9,7 +9,7 @@ spring-cloud Hoxton.SR1
 
 1、服务注册的学习，包括
     Eureka,Zookeeper,Consul
-
+    
 2、服务的负载均衡 LoadBalance
     Ribbon,OpenFeign
     
@@ -32,3 +32,5 @@ spring-cloud Hoxton.SR1
         
 7、分布式链路跟踪
     Springcloud Sleuth + Zipkin
+    
+8、Springcloud Alibaba Nacos
