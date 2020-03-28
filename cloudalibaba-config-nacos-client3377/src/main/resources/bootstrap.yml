@@ -11,3 +11,5 @@ spring:
       config:
         server-addr: localhost:8848
         file-extension: yaml  #指配置格式是yml
+        group: DEV_GROUP
+        namespace: 01f15ad3-7b01-43a2-bcec-3a53be5c2466
