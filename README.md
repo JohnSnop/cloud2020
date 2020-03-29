@@ -33,5 +33,5 @@ spring-cloud Hoxton.SR1
 7、分布式链路跟踪
     Springcloud Sleuth + Zipkin
     
-8、Springcloud Alibaba Nacos 
+8、Springcloud Alibaba Nacos + Sentinel
     服务注册中心 服务配置中心
