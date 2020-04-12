@@ -35,3 +35,6 @@ spring-cloud Hoxton.SR1
     
 8、Springcloud Alibaba Nacos + Sentinel
     服务注册中心 服务配置中心
+    
+9、分布式事务解决方案
+    Seata
